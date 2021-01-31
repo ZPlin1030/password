@@ -4,17 +4,16 @@
 # 最多輸入3次
 # 如果正確就印出 "登入成功!"
 # 如果不正確就印出 "密碼錯誤! 還有__次機會!"
-x = 0
-while True:
-	password = input('請輸入密碼: ')
-	if password != 'a123456':
-		x = x + 1
-		y = 3 - x
-		print('密碼錯誤!，還有', y, '次機會!')
-		if x >= 3:
-			break
-	else:
+password = 'a123456'
+i = 3 #剩餘次數
+while i > 0:
+	pwd = input('請輸入密碼: ')
+	if pwd == password:
 		print('登入成功!')
 		break
+	else:
+		i = i - 1
+		print('密碼錯誤!，還有', i, '次機會!')
+
 		
 
